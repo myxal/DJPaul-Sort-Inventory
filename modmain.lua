@@ -217,7 +217,7 @@ end
 local function sortInventory(player, maxLights, backpackCategory)
 	local inventory    = player and player.components.inventory or nil
 	local isPlayerHurt = (player.components.health:GetPercent() * 100) <= 30
-	local backpack     = inventory and inventory:GetOverflowContainer() or nil
+	local backpack     = (inventory and inventory:GetOverflowContainer() and inventory:GetOverflowContainer().itemtestfn == nil) and inventory:GetOverflowContainer() or nil
 	local armourBag    = { contents = {}, sortBy = 'value', type = 'armour' }
 	local foodBag      = { contents = {}, sortBy = 'value', type = 'food' }
 	local lightBag     = { contents = {}, sortBy = 'value', type = 'light' }
