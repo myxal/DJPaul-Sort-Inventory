@@ -70,28 +70,28 @@ end
 local function itemIsResource(inst)
 	-- Highest frequency to lowest fequency
 	local items = {
-		"Twigs",
-		"Nightmare Fuel",
-		"Rope",
-		"Gold Nugget",
-		"Boards",
-		"Silk",
-		"Papyrus",
-		"Cut Grass",
-		"Thulecite",
-		"Cut Stone",
-		"Flint",
-		"Log",
-		"Living Log",
-		"Pig Skin",
-		"Thulecite Fragments",
-		"Rocks",
-		"Nitre",
+		"twigs",
+		"nightmarefuel",
+		"rope",
+		"goldnugget",
+		"boards",
+		"silk",
+		"papyrus",
+		"cutgrass",
+		"thulecite",
+		"cutstone",
+		"flint",
+		"log",
+		"livinglog",
+		"pigskin",
+		"thulecite_pieces",
+		"rocks",
+		"nitre",
 	}
 
 	for i = 1, #items do
 		local keys = {}
-		if items[i] == inst.name then
+		if items[i] == inst.prefab then
 			return true
 		end
 	end
